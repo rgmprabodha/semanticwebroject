@@ -26,7 +26,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Extract the dynamic data and save it in Fueski. 
+ * Extract the dynamic data of Toulouse and save it in Fueski. 
  * code to be re-factor
  */
 

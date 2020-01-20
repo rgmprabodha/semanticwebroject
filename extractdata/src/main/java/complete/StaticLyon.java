@@ -16,7 +16,27 @@ import org.json.JSONObject;
 import org.json.simple.JSONValue;
 
 
-// json file is written in FRENCH
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.URL;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/**
+ * We do not use this class any more, because this JSON has limited data
+ * Process the Lyon JSON data
+ * @return Lyon stations array
+ * Read all the pages to get full data set
+ * @param url
+ */
+
 public class StaticLyon {
 
 	final String CITYNAME = "LYON";
@@ -43,10 +63,8 @@ public class StaticLyon {
 				processStations();
 			}
 		} catch (JSONException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -88,20 +106,6 @@ public class StaticLyon {
 			double lat = 0;
 			double lon = 0;
 			int capacity =  0;
-			
-//			String url = "http://nominatim.openstreetmap.org/search?q=Emile+Littre,+Saint+Etienne&format=json&addressdetails=1";
-//			JSONObject json;
-//			try {
-//				Map<String, Double> coords;
-//				coords = OpenStreetMapUtils.getInstance().getCoordinates(url);
-//				System.out.println(coords);
-//				System.out.println("latitude :" + coords.get("lat"));
-//				System.out.println("longitude:" + coords.get("lon"));
-//				System.out.println(coords);
-//			} catch (JSONException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
 			Station ss = new Station(ID, name, lat, lon, capacity);
 			stationsList.add(ss);
 		}

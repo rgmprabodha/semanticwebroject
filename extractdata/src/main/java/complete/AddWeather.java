@@ -37,6 +37,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/*
+ * Weather data added for each station 
+ */
 public class AddWeather {
 	private static final String FUESKI_LOCAL_ENDPOINT_GET = "http://localhost:3030/bicycle_stations";
 	private static final String FUESKI_LOCAL_ENDPOINT_UPDATE = "http://localhost:3030/bicycle_stations/update";
@@ -50,9 +53,8 @@ public class AddWeather {
 		processStationWeather(locationsList);
 	}
 
+	// Get all stations
 	public static List<Location> getAllStationsWithLocations() {
-
-
         List<Location> locationsList = new ArrayList<Location>();
 
 	        String query = "PREFIX onto: <http://www.semanticweb.org/emse/ontologies/2019/11/bicycle_stations.owl#>\n" +
@@ -160,7 +162,7 @@ public class AddWeather {
 		for (Location location : locations) {
 
 			String Id = location.getID();
-			String name = location.getName();
+//			String name = location.getName();
 			Double lat = location.getLat();
 			Double lon = location.getLon();
 
@@ -171,7 +173,6 @@ public class AddWeather {
 			JSONArray weatherArray = weatherJson.getJSONArray("weather");
 			JSONObject weatherObject = (JSONObject) weatherArray.get(0);
 			String weatherDescription = (String) weatherObject.get("description");
-
 			
 			JSONObject mainObject = weatherJson.getJSONObject("main");
 			double temperature = (Double)mainObject.get("temp");
@@ -179,9 +180,7 @@ public class AddWeather {
 			int humadity =  (Integer)mainObject.get("humidity");
 			
 			JSONObject windObject = weatherJson.getJSONObject("wind");
-			Double windSpeed =  (Double) windObject.get("speed");
-			
-			
+			Double windSpeed =  (Double) windObject.get("speed");	
 
 
 			String query = "PREFIX onto: <http://www.semanticweb.org/emse/ontologies/2019/11/bicycle_stations.owl#>\r\n"
@@ -196,10 +195,10 @@ public class AddWeather {
 					+ " onto:windSpeed \"" + windSpeed + "\";"
 					+ " onto:weatherDescription \"" + weatherDescription + "\";"
 					+ " onto:pressure \"" + pressure + "\"; ] .}";
-//
-//			UpdateRequest update = UpdateFactory.create(query);
-//			UpdateProcessor qexec = UpdateExecutionFactory.createRemote(update, FUESKI_LOCAL_ENDPOINT_UPDATE);
-//			qexec.execute();
+
+			UpdateRequest update = UpdateFactory.create(query);
+			UpdateProcessor qexec = UpdateExecutionFactory.createRemote(update, FUESKI_LOCAL_ENDPOINT_UPDATE);
+			qexec.execute();
 			System.out.println(query);
 
 		}

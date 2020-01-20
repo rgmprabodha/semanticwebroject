@@ -26,8 +26,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Extract the dynamic data and save it in Fueski. 
- * code to be re-factor
+ * Extract the dynamic data of Lyon and save it in Fueski. 
+ * 
  */
 
 public class DynamicLyon {
@@ -99,10 +99,10 @@ public class DynamicLyon {
 			JSONObject properties=(JSONObject) stationJson.get("properties");
 			String ID = (String) properties.get("number");
 			String nava = (String) properties.get("available_bikes");
-			String ndocava = (String) properties.get("available_bike_stands");
-		    String nupdatetime = (String) properties.get("last_update");
-		    String nlat = (String) properties.get("lat");
-		    String nlong = (String) properties.get("lng");
+//			String ndocava = (String) properties.get("available_bike_stands");
+//		    String nupdatetime = (String) properties.get("last_update");
+//		    String nlat = (String) properties.get("lat");
+//		    String nlong = (String) properties.get("lng");
 
 			String iri = stationURIPrefix + ":LYON:" + ID;
 

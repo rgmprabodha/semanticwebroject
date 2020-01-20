@@ -14,6 +14,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Process the Nantes JSON data
+ * @return Nantes stations array
+ * @param url
+ */
+
 public class StaticNantes {
 	static String url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&&apiKey=b5c059fa1b8e115f157e20cfa797e01b7650f0a7";
 	static List<Station> stationsList = new ArrayList<Station>();

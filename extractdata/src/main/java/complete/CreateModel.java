@@ -26,7 +26,8 @@ import org.apache.jena.vocabulary.RDF;
 import org.json.JSONException;
 
 /**
- * Extract the static data and save it in Fueski. For now, consider 3 cities,
+ * This is the first file to be run
+ * Extract the static data and save it in Fueski. For now, consider 4 cities,
  * add more in future. Run this file to save static data to DB.
  */
 
@@ -38,14 +39,12 @@ public class CreateModel {
 	static String cityURIPrefix;
 	static String publicBicycleStationURIPrefix;
 	static String[] cities = { "SAINT-ETIENNE", "LYON", "TOULOUSE", "NANTES" };
-//	static String[] cities = { "LYON"};
 
 	public static void main(String args[]) throws JSONException, IOException {
 		sslResolve();
 		initializeModel();
 		for (String city : cities) {
 			List<Station> stations = null;
-//			List<LatLong> locations = null;
 
 			if (city == "SAINT-ETIENNE") {
 				StaticSaintEtienne se = new StaticSaintEtienne();
@@ -71,12 +70,6 @@ public class CreateModel {
 				stations = pa.processData();
 				addCityToModel(stations, city);
 			}
-
-			// TODO Add lat and lon of Lyon stations
-//			AddLyonLatLon lyonLocation = new AddLyonLatLon();	
-//			locations = lyonLocation.processData();
-//			addLyonLocationsToModel(locations);
-
 			saveToFueski();
 		}
 		System.out.println("DONE: Extracted all the data and save to DB successfully..");
@@ -153,20 +146,6 @@ public class CreateModel {
 		}
 	}
 
-//	public static void addLyonLocationsToModel(List<LatLong> locations) {
-//		
-//		for (LatLong location : locations) {
-//			Resource StationRes = model.getResource(location.IRI);			
-//
-//			Property plati = model.createProperty(NsPrefix.getGeoNS() + "lat");
-//			Statement statement_lat = model.createLiteralStatement(StationRes, plati, location.iriLat);
-//			model.add(statement_lat);
-//
-//			Property plongi = model.createProperty(NsPrefix.getGeoNS() + "long");
-//			Statement statement_longi = model.createLiteralStatement(StationRes, plongi, location.iriLon);
-//			model.add(statement_longi);			
-//		}
-//	}
 
 	// Save the model in Fueski DB
 	public static void saveToFueski() {
@@ -176,14 +155,14 @@ public class CreateModel {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		String url = "E:\\CPS2\\Year_2\\Semantic_Web\\Jena\\extractdata\\src\\main\\java\\static_01_19.ttl";
-
-		try {
-			model.write(new FileOutputStream(new File(url)), "TURTLE");
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+//		String url = "E:\\CPS2\\Year_2\\Semantic_Web\\Jena\\extractdata\\src\\main\\java\\static_01_19.ttl";
+//
+//		try {
+//			model.write(new FileOutputStream(new File(url)), "TURTLE");
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 }

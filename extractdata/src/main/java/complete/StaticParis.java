@@ -1,6 +1,7 @@
 package complete;
 
 import java.io.BufferedReader;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -13,6 +14,13 @@ import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+/**
+ * We do not use this class, because we could not find dynamic data
+ * Process the Paris JSON data
+ * @return Paris stations array
+ * @param url
+ */
 
 public class StaticParis {
 
@@ -52,9 +60,7 @@ public class StaticParis {
 		for (Object station : stations) {
 			JSONObject stationJson = (JSONObject) station;
 			String ID = (String) stationJson.get("recordid");
-
-			JSONObject fileds = (JSONObject) stationJson.get("fields");
-			
+			JSONObject fileds = (JSONObject) stationJson.get("fields");			
 			String name = (String) fileds.get("name");
 			double lat = (Double) fileds.get("lat");
 			double lon = (Double) fileds.get("lon");

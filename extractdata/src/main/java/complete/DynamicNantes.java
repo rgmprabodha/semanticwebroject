@@ -25,6 +25,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * Extract the dynamic data of Nantes and save it in Fueski. 
+ * 
+ */
 public class DynamicNantes {
 	private static final String FUESKI_LOCAL_ENDPOINT = "http://localhost:3030/bicycle_stations/update";
 

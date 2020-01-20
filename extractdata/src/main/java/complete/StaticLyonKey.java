@@ -14,6 +14,26 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.URL;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+/**
+ * Process the Lyon JSON data
+ * @return Lyon stations array
+ * @param url
+ */
+
 public class StaticLyonKey {
 	static String url = "https://api.jcdecaux.com/vls/v1/stations?contract=lyon&&apiKey=b5c059fa1b8e115f157e20cfa797e01b7650f0a7";
 	static List<Station> stationsList = new ArrayList<Station>();
@@ -50,8 +70,7 @@ public class StaticLyonKey {
 			JSONObject stationJson = (JSONObject) station;
 			Object ID =  stationJson.get("number");
 			String name = (String) stationJson.get("name");
-			JSONObject position = stationJson.getJSONObject("position");
-			
+			JSONObject position = stationJson.getJSONObject("position");			
 			double lat = (Double) position.get("lat");
 			double lon = (Double) position.get("lng");
 			int capacity =  (Integer) stationJson.get("bike_stands");
