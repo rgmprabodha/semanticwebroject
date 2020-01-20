@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/emse/ontologies/2019/11/bicycle_stations.owl">
-    <Prefix name="" IRI="http://www.semanticweb.org/malshaniranchagoda/ontologies/2019/11/bicycle_stations.owl"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/emse/ontologies/2019/11/bicycle_stations.owl"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -38,6 +38,9 @@
         <Class IRI="#TramStation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Weather"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasAvailability"/>
     </Declaration>
     <Declaration>
@@ -45,6 +48,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasStation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWeather"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#availableBicycles"/>
@@ -56,16 +62,34 @@
         <DataProperty IRI="#cityName"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#humadity"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#latitude"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#longitude"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#pressure"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#stationName"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#temperature"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#updateTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#weatherDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#weatherUpdateTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#windSpeed"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#BusStation"/>
@@ -103,6 +127,10 @@
         <ObjectProperty IRI="#hasStation"/>
         <Class IRI="#City"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasWeather"/>
+        <Class IRI="#PublicBicycleStation"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAvailability"/>
         <Class IRI="#Availability"/>
@@ -114,6 +142,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasStation"/>
         <Class IRI="#Station"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasWeather"/>
+        <Class IRI="#Weather"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#availableBicycles"/>
@@ -144,6 +176,10 @@
         <Class IRI="#City"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#humadity"/>
+        <Class IRI="#Weather"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#latitude"/>
         <Class IRI="#Station"/>
     </DataPropertyDomain>
@@ -152,12 +188,32 @@
         <Class IRI="#Station"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#pressure"/>
+        <Class IRI="#Weather"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#stationName"/>
         <Class IRI="#Station"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#temperature"/>
+        <Class IRI="#Weather"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#updateTime"/>
         <Class IRI="#Availability"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#weatherDescription"/>
+        <Class IRI="#Weather"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#weatherUpdateTime"/>
+        <Class IRI="#Weather"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#windSpeed"/>
+        <Class IRI="#Weather"/>
     </DataPropertyDomain>
 </Ontology>
 
