@@ -1,0 +1,182 @@
+@prefix geo:   <https://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix ex:    <http://www.example.org/> .
+@prefix onto:  <http://www.semanticweb.org/emse/ontologies/2019/11/bicycle_stations.owl#> .
+
+<http://www.semanticweb.org/emse/ontologies/2019/11/bicycle_stations.owl#City/SAINT-ETIENNE>
+        a                "http://www.semanticweb.org/emse/ontologies/2019/11/bicycle_stations.owl#PublicBicycleStation" ;
+        onto:cityName    "SAINT-ETIENNE" ;
+        onto:hasStation  onto:Station:SAINT-ETIENNE:120 , onto:Station:SAINT-ETIENNE:129 , onto:Station:SAINT-ETIENNE:102 , onto:Station:SAINT-ETIENNE:127 , onto:Station:SAINT-ETIENNE:108 , onto:Station:SAINT-ETIENNE:103 , onto:Station:SAINT-ETIENNE:114 , onto:Station:SAINT-ETIENNE:109 , onto:Station:SAINT-ETIENNE:130 , onto:Station:SAINT-ETIENNE:115 , onto:Station:SAINT-ETIENNE:126 , onto:Station:SAINT-ETIENNE:106 , onto:Station:SAINT-ETIENNE:101 , onto:Station:SAINT-ETIENNE:112 , onto:Station:SAINT-ETIENNE:111 , onto:Station:SAINT-ETIENNE:107 , onto:Station:SAINT-ETIENNE:118 , onto:Station:SAINT-ETIENNE:113 , onto:Station:SAINT-ETIENNE:124 , onto:Station:SAINT-ETIENNE:110 , onto:Station:SAINT-ETIENNE:119 , onto:Station:SAINT-ETIENNE:125 , onto:Station:SAINT-ETIENNE:105 , onto:Station:SAINT-ETIENNE:116 , onto:Station:SAINT-ETIENNE:122 , onto:Station:SAINT-ETIENNE:128 , onto:Station:SAINT-ETIENNE:117 , onto:Station:SAINT-ETIENNE:104 , onto:Station:SAINT-ETIENNE:123 .
+
+onto:Station:SAINT-ETIENNE:115
+        onto:capacity     "24"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Congrès"@En ;
+        geo:lat           "45.426972"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.404048"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:124
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Janin"@En ;
+        geo:lat           "45.448458"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.39492"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:105
+        onto:capacity     "32"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Jaures"@En ;
+        geo:lat           "45.440725"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.387295"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:114
+        onto:capacity     "24"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Bellevue"@En ;
+        geo:lat           "45.415579"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.393322"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:123
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Marx"@En ;
+        geo:lat           "45.422732"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.409376"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:129
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Roannelle"@En ;
+        geo:lat           "45.4357171"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.3829931"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:104
+        onto:capacity     "12"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Jacquard"@En ;
+        geo:lat           "45.441888"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.382492"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:113
+        onto:capacity     "24"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Centre 2"@En ;
+        geo:lat           "45.42342"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.392292"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:119
+        onto:capacity     "24"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Fourneyron"@En ;
+        geo:lat           "45.4395"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.395669"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:122
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Terrasse"@En ;
+        geo:lat           "45.46502"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.37874"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:128
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Technopole"@En ;
+        geo:lat           "45.457"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.39241"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:103
+        onto:capacity     "24"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Carnot"@En ;
+        geo:lat           "45.447093"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.385487"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:109
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "A. Thomas"@En ;
+        geo:lat           "45.4328"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.388035"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:112
+        onto:capacity     "24"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Tréfilerie"@En ;
+        geo:lat           "45.427296"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.390669"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:118
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "J. Moulin"@En ;
+        geo:lat           "45.437404"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.392469"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:127
+        onto:capacity     "24"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "J. Marc"@En ;
+        geo:lat           "45.4732778"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.3665277"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:102
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Chaléassiere"@En ;
+        geo:lat           "45.453601"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.383062"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:108
+        onto:capacity     "32"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Peuple"@En ;
+        geo:lat           "45.436265"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.387539"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:130
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Bicentenaire"@En ;
+        geo:lat           "45.420286"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.392776"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:111
+        onto:capacity     "12"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Tardy"@En ;
+        geo:lat           "45.427396"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.386718"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:117
+        onto:capacity     "24"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Chavanelle"@En ;
+        geo:lat           "45.435109"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.391962"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:120
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "St Francois"@En ;
+        geo:lat           "45.439538"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.403407"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:126
+        onto:capacity     "32"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Hôp. Nord"@En ;
+        geo:lat           "45.479487"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.362541"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:101
+        onto:capacity     "32"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Châteaucreux"@En ;
+        geo:lat           "45.442972"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.398855"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:107
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Clapier"@En ;
+        geo:lat           "45.436903"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.378789"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:110
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "A. France"@En ;
+        geo:lat           "45.43065"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.389752"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:116
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Villeboeuf"@En ;
+        geo:lat           "45.431808"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.395127"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:125
+        onto:capacity     "16"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Soleil"@En ;
+        geo:lat           "45.450533"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.403566"^^<http://www.w3.org/2001/XMLSchema#double> .
+
+onto:Station:SAINT-ETIENNE:106
+        onto:capacity     "32"^^<http://www.w3.org/2001/XMLSchema#int> ;
+        onto:stationName  "Dorian"@En ;
+        geo:lat           "45.43836"^^<http://www.w3.org/2001/XMLSchema#double> ;
+        geo:long          "4.388435"^^<http://www.w3.org/2001/XMLSchema#double> .
